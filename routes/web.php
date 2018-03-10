@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * 指定一個新的路由到domain/about下，載入about.blade.php作為view
+ */
+Route::get('about', function () {
+    return view('about');
+});
