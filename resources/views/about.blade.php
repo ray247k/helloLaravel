@@ -83,10 +83,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="">基本資料</a>
-                    <a href="">學經歷</a>
-                    <a href="">相關作品</a>
-                    <a href="">自傳</a>
+                    <a href="#">專案名稱：<?php echo $project?></a>
+                    <a href="#">GitHub：<?= $github ?></a>
+                </div>
+                <div class="links">
+                    <a href="#">相關技術：</a>
+                    @foreach($skill as $skill)
+                        <p>{{ $skill }}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
