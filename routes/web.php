@@ -20,6 +20,8 @@ Route::get('/', function () {
  */
 Route::get('about', function () {
 
+    $tasks = DB::table('tasks')->get();
     return view('about',['github' => 'ray247k', 'project'=> 'helloLaravel'])
-        ->with('skill', ['PHP', 'docker', 'nginx']);
+        ->with('skill', ['PHP', 'docker', 'nginx'])
+        ->with('tasks',$tasks);
 });

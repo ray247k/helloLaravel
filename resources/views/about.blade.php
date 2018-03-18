@@ -92,6 +92,12 @@
                         <p>{{ $skill }}</p>
                     @endforeach
                 </div>
+                <div class="links">
+                    <a href="#">相關指令</a>
+                    @foreach($tasks as $tasks)
+                        <p>{{ $tasks->body }}</p>
+                    @endforeach
+                </div>
             </div>
         </div>
     </body>
