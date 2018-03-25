@@ -24,16 +24,6 @@ Route::get('about', function () {
         ->with('skill', ['PHP', 'docker', 'nginx']);
 });
 
-Route::get('/tasks', function () {
+Route::get('/tasks', 'TasksController@index');
 
-    $tasks = App\Task::all();
-    return view('tasks.index')
-        ->with('tasks', $tasks);
-});
-
-Route::get('/tasks/{task}', function ($id) {
-
-//    $task = DB::table('tasks')->find($id);
-    $task = App\task::find($id);
-    return view('tasks.show', compact('task'));
-});
+Route::get('/tasks/{task}', 'TasksController@show');
