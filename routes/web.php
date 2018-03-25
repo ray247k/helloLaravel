@@ -26,13 +26,14 @@ Route::get('about', function () {
 
 Route::get('/tasks', function () {
 
-    $tasks = DB::table('tasks')->latest()->get();
+    $tasks = App\Task::all();
     return view('tasks.index')
         ->with('tasks', $tasks);
 });
 
 Route::get('/tasks/{task}', function ($id) {
 
-    $task = DB::table('tasks')->find($id);
+//    $task = DB::table('tasks')->find($id);
+    $task = App\task::find($id);
     return view('tasks.show', compact('task'));
 });
