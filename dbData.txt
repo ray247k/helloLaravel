@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE `tasks` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `body` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `tasks` (`id`, `code`, `body`, `created_at`, `updated_at`) VALUES
+(1,	'up',	'做點事情',	'2018-03-18 08:16:02',	'2018-03-18 08:16:02'),
+(2,	'down',	'回復上一動',	'2018-03-18 08:16:30',	'2018-03-18 08:16:30'),
+(3,	'pause',	'暫停一下',	'2018-03-18 08:16:54',	'2018-03-18 08:16:54');
