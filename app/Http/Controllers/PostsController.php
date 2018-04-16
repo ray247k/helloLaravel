@@ -36,7 +36,7 @@ class PostsController extends Controller
         $post->title = request('title');
         $post->body = request('body');
         $post->save();
-        return redirect('/post');
+        return redirect('/posts');
     }
 
     public function show()
