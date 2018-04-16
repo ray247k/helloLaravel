@@ -7,13 +7,18 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="title">標題</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="文章標題">
+                <input type="text" class="form-control" id="title" name="title" placeholder="文章標題(10個字以內)">
             </div>
             <div class="form-group">
                 <label for="body">內文</label>
                 <textarea type="text" class="form-control" id="body" name="body" placeholder="文章內文"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">送出</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">送出</button>
+            </div>
         </form>
+
+        @include('layouts.errors')
+
     </main>
 @endsection
