@@ -19,5 +19,23 @@
                 @endforeach
             </ul>
         </div>
+
+        <hr>
+
+        <div class="card">
+            <div class="card-block">
+
+                <form method="post" action="/posts">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <textarea type="text" class="form-control" id="body" name="body" placeholder="留言內容"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">留言</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
 @endsection
