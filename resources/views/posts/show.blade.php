@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-block">
 
-                <form method="post" action="/posts">
+                <form method="post" action="/posts/{{$post->id}}/comments">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <textarea type="text" class="form-control" id="body" name="body" placeholder="留言內容"></textarea>
