@@ -31,3 +31,4 @@ Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/{posts}', 'PostsController@show');
 Route::post('/posts', 'PostsController@store');
+Route::post('/posts/{post}/comments', 'CommentsController@store');
