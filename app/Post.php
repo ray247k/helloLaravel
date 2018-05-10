@@ -10,4 +10,13 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function addComment()
+    {
+        $comment = new Comment;
+
+        $comment->post_id = $this->id;
+        $comment->body = request('body');
+        $comment->save();
+    }
 }
